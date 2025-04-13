@@ -1,0 +1,138 @@
+:root {
+    --font-size: 16px;
+    --body-color:  #5dade2; 
+    --container-color: #ffffff;
+    --result-color: #20d7cbbe;
+    --description-color: #1e8449;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    width: 350px;
+    max-width: 800px;
+    height: max-content;
+    min-height: 300px;
+    padding: 10px;
+    padding-top: 25px;
+    margin: 15px 15px;
+    background-color: var(--container-color);
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px 10px rgba(52, 66, 77, 0.242);
+}
+
+.container form {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #a29d9d;
+    border-radius: 15px;
+    padding: 5px;
+    margin: auto;
+}
+
+.container input, .container button {
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    opacity: 0.7;
+}
+
+.container input {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--result-color);
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.result .name {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.result .temperature img {
+    filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s;
+}
+
+.result .temperature figcaption {
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.result ul {
+    list-style: none;
+    display: flex;
+    flex-direction: space-around;
+    justify-content: center;
+    gap: 10px;
+}
+
+.result ul li {
+    color: #e6e9ed;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--description-color);
+    width: 90px;
+    padding: 7px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(52, 66, 77, 0.242);
+}
+
+.result ul li i {
+    font-size: 2em;
+}
+
+.error{
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="text" placeholder="Enter city name">
+            <button type="submit" id="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="result">
+            <figure class="name">
+                <figcaption>Rabat</figcaption> 
+                <img src="https://flagsapi.com/MA/shiny/32.png">
+            </figure>
+
+            <figure class="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                <figcaption>
+                    <span>31</span>
+                    <sup>o</sup>
+                </figcaption> 
+            </figure>
+            <p class="description">overcast clouds</p>
+            <ul>
+                <li>
+                    <span>clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span><span id="clouds">98</span>%</span>
+                </li>
+                <li>
+                    <span>humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span><span id="humidity">98</span>%</span>
+                </li>
+                <li>
+                    <span>pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span><span id="pressure">98</span>hPa</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+</body>
+</html>
